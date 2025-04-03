@@ -1,89 +1,141 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Supernovia Global Technologies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom right, #e6f0ff, #ffffff);
-    }
-    header {
-      background-color: #004080;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-    }
-    .slogan {
-      font-size: 1.2em;
-      margin-top: 5px;
-      font-weight: 300;
-    }
-    nav {
+      background: linear-gradient(to right, #00ADB5, #00d9c0);
+      color: #ffffff;
+      line-height: 1.6;
+      min-height: 100vh;
       display: flex;
-      justify-content: center;
-      background-color: #cce0ff;
-      padding: 10px;
+      flex-direction: column;
     }
+
+    header {
+      padding: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 800;
+    }
+
     nav a {
-      margin: 0 15px;
+      margin-left: 2rem;
+      color: #fff;
       text-decoration: none;
-      color: #003366;
-      font-weight: bold;
+      font-weight: 600;
+      transition: color 0.3s ease;
     }
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
+
+    nav a:hover {
+      color: #f4f4f4;
     }
-    h2 {
-      color: #004080;
+
+    main {
+      flex: 1;
+      padding: 4rem 2rem;
+      max-width: 960px;
+      margin: 0 auto;
     }
-    footer {
+
+    .hero {
       text-align: center;
-      padding: 20px;
-      background-color: #f0f0f0;
-      color: #555;
+      margin-bottom: 4rem;
     }
-    .logo-placeholder {
-      width: 80px;
-      height: 80px;
-      background-color: white;
-      border-radius: 50%;
-      margin: 0 auto 10px;
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    footer {
+      padding: 2rem;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.2);
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo-placeholder"></div>
-    <h1>Supernovia Global Technologies</h1>
-    <div class="slogan">连接全球科技与宠物品牌</div>
+    <h1>Supernovia</h1>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
-  <nav>
-    <a href="#services">我们的服务</a>
-    <a href="#contact">联系我们</a>
-  </nav>
-  <section id="services">
-    <h2>我们的服务</h2>
-    <ul>
-      <li>IT 技术外包</li>
-      <li>SaaS 工具开发</li>
-      <li>跨境宠物用品 B2B 平台</li>
-    </ul>
-  </section>
-  <section id="contact">
-    <h2>联系我们</h2>
-    <p>邮箱：contact@supernovia.tech</p>
-    <!-- <p>GitHub：<a href="https://github.com/emmajiang123" target="_blank">emmajiang123</a></p> -->
-  </section>
-  <footer>
-    &copy; 2025 Supernovia Global Technologies LLC
+
+  <main>
+    <section class="hero">
+      <h2>连接全球科技与宠物品牌</h2>
+      <p>Supernovia Global Technologies LLC 致力于通过技术创新连接世界各地的宠物品牌、SaaS解决方案与智能服务，打造可持续、智能化的行业未来。</p>
+    </section>
+
+    <section class="services" id="services">
+      <div class="card">
+        <h3>技术外包 & IT服务</h3>
+        <p>提供高质量的Web/App前端开发、系统集成和定制化软件解决方案。</p>
+      </div>
+      <div class="card">
+        <h3>SaaS工具与编辑器</h3>
+        <p>开发现代化SaaS平台、内容编辑器及轻量级AI工具，赋能企业效率。</p>
+      </div>
+      <div class="card">
+        <h3>跨境宠物用品 B2B</h3>
+        <p>对接美国优质宠物品牌与中国市场，提供撮合、交易及供应链服务。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <p>© 2025 Supernovia Global Technologies LLC. All rights reserved.</p>
+    <p>Email: contact@supernovia.tech </p>
   </footer>
 </body>
 </html>
+
